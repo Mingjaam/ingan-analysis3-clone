@@ -1,0 +1,360 @@
+.result-body {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(201, 169, 98, 0.12), transparent 24rem),
+    linear-gradient(180deg, #09090a, #11100f 48%, #080808);
+}
+
+.result-header-link {
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 14px;
+  border: 1px solid rgba(201, 169, 98, 0.28);
+  border-radius: 999px;
+  color: var(--gold-2);
+  font-weight: 800;
+}
+
+.result-shell {
+  width: min(100% - 32px, 980px);
+  margin: 0 auto;
+  padding: 112px 0 72px;
+}
+
+.result-loading,
+.result-error {
+  min-height: calc(100vh - 160px);
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 18px;
+  text-align: center;
+}
+
+.result-loading h1,
+.result-error h1,
+.report-hero h1 {
+  color: #f3ddb0;
+  font-family: "Noto Serif KR", serif;
+  font-size: clamp(2.2rem, 8vw, 5rem);
+  font-weight: 500;
+  line-height: 1.18;
+}
+
+.result-loading p,
+.result-error p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.result-home-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+  text-decoration: none;
+}
+
+.report-page {
+  display: grid;
+  gap: 26px;
+}
+
+.report-hero,
+.tarot-section,
+.evidence-strip,
+.score-section,
+.chapter-section,
+.keyword-section,
+.locked-section {
+  border: 1px solid rgba(201, 169, 98, 0.18);
+  border-radius: 16px;
+  background:
+    linear-gradient(180deg, rgba(201, 169, 98, 0.07), transparent),
+    rgba(15, 15, 17, 0.9);
+  box-shadow: 0 24px 90px rgba(0, 0, 0, 0.32);
+}
+
+.report-hero {
+  min-height: 520px;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 18px;
+  padding: clamp(32px, 8vw, 72px);
+  text-align: center;
+}
+
+.report-hero > p {
+  color: #d7c7a5;
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+}
+
+.result-profile {
+  margin-top: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border: 1px solid rgba(201, 169, 98, 0.22);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.result-profile img {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+.result-profile strong,
+.result-profile span {
+  display: block;
+  text-align: left;
+}
+
+.result-profile span {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.tarot-section {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  align-items: center;
+  gap: 32px;
+  padding: clamp(24px, 5vw, 44px);
+}
+
+.big-type-card {
+  aspect-ratio: 0.72;
+  padding: 22px 16px 18px;
+  border: 2px solid var(--gold);
+  border-radius: 10px;
+  background: #fffaf0;
+  color: #17130f;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0 0 32px rgba(201, 169, 98, 0.28);
+}
+
+.big-type-card .card-art {
+  min-height: 210px;
+}
+
+.big-type-card strong {
+  font-family: "Noto Serif KR", serif;
+  font-size: 1.5rem;
+}
+
+.big-type-card small {
+  margin-top: 6px;
+  color: #5a5146;
+}
+
+.summary-copy h2,
+.score-section h2,
+.chapter-section h2,
+.keyword-section h2,
+.locked-section h2 {
+  color: #f4dfb8;
+  font-size: clamp(1.65rem, 4vw, 3rem);
+}
+
+.summary-copy p,
+.locked-section p,
+.report-disclaimer {
+  margin-top: 16px;
+  color: var(--muted);
+  line-height: 1.85;
+  font-size: 1.03rem;
+}
+
+.evidence-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  overflow: hidden;
+}
+
+.evidence-strip div {
+  min-height: 118px;
+  display: grid;
+  align-content: center;
+  gap: 6px;
+  padding: 22px;
+  border-right: 1px solid rgba(201, 169, 98, 0.12);
+}
+
+.evidence-strip div:last-child {
+  border-right: 0;
+}
+
+.evidence-strip span {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.evidence-strip strong {
+  color: #f1dfb8;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+
+.score-section,
+.chapter-section,
+.keyword-section,
+.locked-section {
+  padding: clamp(24px, 5vw, 44px);
+}
+
+.score-grid {
+  margin-top: 24px;
+  display: grid;
+  gap: 16px;
+}
+
+.score-item {
+  display: grid;
+  grid-template-columns: minmax(120px, 220px) minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 16px;
+}
+
+.score-item span {
+  color: #e8d7b1;
+  font-weight: 800;
+}
+
+.score-track {
+  height: 11px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #262427;
+}
+
+.score-track i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #8f6f24, var(--gold-2));
+}
+
+.score-item strong {
+  color: #f4e7ca;
+}
+
+.chapter-list {
+  margin-top: 26px;
+  display: grid;
+  gap: 14px;
+}
+
+.chapter-card {
+  padding: 22px;
+  border: 1px solid rgba(201, 169, 98, 0.15);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.chapter-card h3 {
+  color: #edd8a8;
+  font-family: "Noto Serif KR", serif;
+  font-size: 1.32rem;
+}
+
+.chapter-card p {
+  margin-top: 10px;
+  color: var(--muted);
+  line-height: 1.78;
+}
+
+.keyword-grid {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.keyword-grid span {
+  padding: 9px 12px;
+  border: 1px solid rgba(201, 169, 98, 0.22);
+  border-radius: 999px;
+  color: #dccca9;
+  background: rgba(201, 169, 98, 0.08);
+}
+
+.locked-section {
+  text-align: center;
+}
+
+.locked-preview {
+  margin: 26px auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  filter: blur(0.2px);
+}
+
+.locked-preview div {
+  min-height: 120px;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  border: 1px solid rgba(201, 169, 98, 0.12);
+  border-radius: 10px;
+  color: rgba(244, 223, 184, 0.56);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015));
+}
+
+.report-disclaimer {
+  margin: 0;
+  padding: 0 6px;
+  color: #7f776b;
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+@media (max-width: 780px) {
+  .result-shell {
+    width: min(100% - 28px, 520px);
+    padding-top: 96px;
+  }
+
+  .report-hero {
+    min-height: 460px;
+  }
+
+  .tarot-section,
+  .evidence-strip,
+  .locked-preview {
+    grid-template-columns: 1fr;
+  }
+
+  .big-type-card {
+    width: min(100%, 230px);
+    justify-self: center;
+  }
+
+  .evidence-strip div {
+    min-height: 86px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(201, 169, 98, 0.12);
+  }
+
+  .evidence-strip div:last-child {
+    border-bottom: 0;
+  }
+
+  .score-item {
+    grid-template-columns: 1fr auto;
+  }
+
+  .score-track {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+}

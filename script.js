@@ -36,6 +36,10 @@ const statuses = [
   "스페셜 질문 리포트 챕터를 생성하는 중입니다."
 ];
 
+function apiBase() {
+  return window.INSTAGRAM_ANALYSIS_API_BASE || "";
+}
+
 function normalizeHandle(value) {
   return value.trim().replace(/^@+/, "").replace(/\s+/g, "");
 }
@@ -120,16 +124,55 @@ function openProfileStep() {
   openModal(profileModal);
 }
 
-function startAnalysis() {
+async function startAnalysis() {
   state.year = birthYear.value;
   closeModals();
   document.body.classList.add("analysis-open");
   analysisOverlay.setAttribute("aria-hidden", "false");
   analysisOverlayTitle.textContent = `@${state.handle} 분석을 시작했습니다`;
   progressFill.style.width = "6%";
-  analysisStatus.textContent = statuses[0];
+  analysisStatus.textContent = "실제 Instagram Login 연결을 준비하는 중입니다.";
   mainCta.textContent = "분석 중...";
-  runProgress();
+
+  try {
+    const response = await fetch(`${apiBase()}/api/analysis/start`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        handle: state.handle,
+        accountType: state.accountType,
+        question: state.question,
+        gender: state.gender,
+        birthYear: state.year
+      })
+    });
+    const data = await response.json().catch(() => ({}));
+
+    if (!response.ok) {
+      showBackendSetup(data);
+      return;
+    }
+
+    if (data.mode === "setup_required") {
+      showBackendSetup(data);
+      return;
+    }
+
+    if (data.authUrl) {
+      progressFill.style.width = "38%";
+      analysisStatus.textContent = "Instagram 권한 동의 화면으로 이동합니다.";
+      setTimeout(() => {
+        window.location.href = data.authUrl;
+      }, 700);
+      return;
+    }
+
+    showBackendSetup({ message: "분석 서버 응답에 authUrl이 없습니다." });
+  } catch (error) {
+    showBackendSetup({
+      message: "Python 분석 서버에 연결할 수 없습니다. 로컬에서는 `python app.py`로 실행해야 실제 분석이 가능합니다."
+    });
+  }
 }
 
 function runProgress() {
@@ -153,6 +196,20 @@ function runProgress() {
       analysisStatus.textContent = "분석 서버에 접수되었습니다. 리포트 미리보기를 준비하고 있습니다.";
     }
   }, 620);
+}
+
+function showBackendSetup(data) {
+  clearInterval(state.progressTimer);
+  progressFill.style.width = "100%";
+  analysisOverlayTitle.textContent = "실제 분석 서버 설정이 필요합니다";
+  analysisStatus.innerHTML = [
+    data?.message || "Instagram API 앱 설정이 필요합니다.",
+    "`.env`에 IG_APP_ID, IG_APP_SECRET, IG_REDIRECT_URI를 넣고 Python 서버로 실행하세요.",
+    "정적 GitHub Pages만으로는 실제 Instagram token을 안전하게 받을 수 없습니다."
+  ].join("<br>");
+  document.querySelectorAll(".analysis-steps li").forEach((step, index) => {
+    step.classList.toggle("active", index === 0);
+  });
 }
 
 function closeAnalysisOverlay() {

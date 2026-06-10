@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#09090a">
+    <title>무의식 분석 결과 | Inner AI Lab</title>
+    <meta name="description" content="Instagram 데이터 기반 무의식 분석 결과 화면입니다.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./result.css">
+  </head>
+  <body class="result-body">
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Inner AI Lab 홈">
+        <span class="brand-seal">IA</span>
+        <span>
+          <strong>inner.ai</strong>
+          <small>심리연구소</small>
+        </span>
+      </a>
+      <a class="result-header-link" href="./">새 분석</a>
+    </header>
+
+    <main class="result-shell">
+      <section class="result-loading" id="loadingState">
+        <span class="scanner"></span>
+        <h1>리포트를 불러오는 중</h1>
+        <p>Instagram 데이터에서 추출한 패턴을 정리하고 있습니다.</p>
+      </section>
+
+      <section class="result-error" id="errorState" hidden>
+        <h1>분석을 완료하지 못했습니다</h1>
+        <p id="errorMessage">다시 시도해 주세요.</p>
+        <a class="gold-button result-home-button" href="./">처음으로 돌아가기</a>
+      </section>
+
+      <article class="report-page" id="reportPage" hidden>
+        <section class="report-hero">
+          <span class="section-kicker">REPORT COMPLETE</span>
+          <h1 id="archetypeName">가면 뒤에 숨은 광대</h1>
+          <p id="archetypeSubtitle">웃으며 거리를 조절하는 사람</p>
+          <div class="result-profile">
+            <img id="profileImage" alt="" hidden>
+            <div>
+              <strong id="username">@instagram</strong>
+              <span id="profileMeta">Professional account</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="tarot-section">
+          <div class="big-type-card">
+            <span class="card-art cloud"></span>
+            <strong id="typeCardTitle">웃는 광대</strong>
+            <small>THE MASKED SELF</small>
+          </div>
+          <div class="summary-copy">
+            <h2>당신의 무의식 요약</h2>
+            <p id="summaryText"></p>
+          </div>
+        </section>
+
+        <section class="evidence-strip">
+          <div>
+            <span>게시물</span>
+            <strong id="mediaAnalyzed">0</strong>
+          </div>
+          <div>
+            <span>댓글</span>
+            <strong id="commentsAnalyzed">0</strong>
+          </div>
+          <div>
+            <span>관계 신호</span>
+            <strong id="uniqueCommenters">0</strong>
+          </div>
+          <div>
+            <span>총 반응</span>
+            <strong id="totalReactions">0</strong>
+          </div>
+        </section>
+
+        <section class="score-section">
+          <span class="section-kicker">UNCONSCIOUS INDEX</span>
+          <h2>무의식 지표</h2>
+          <div class="score-grid" id="scoreGrid"></div>
+        </section>
+
+        <section class="chapter-section">
+          <span class="section-kicker">REPORT CHAPTERS</span>
+          <h2>분석 챕터</h2>
+          <div class="chapter-list" id="chapterList"></div>
+        </section>
+
+        <section class="keyword-section">
+          <h2>데이터에서 자주 보인 단서</h2>
+          <div class="keyword-grid" id="keywordGrid"></div>
+        </section>
+
+        <section class="locked-section">
+          <span class="section-kicker">FULL REPORT</span>
+          <h2>55페이지 전체 리포트 열기</h2>
+          <p>상세 관계 패턴, 사랑하는 방식, 호감을 사는 법, 숨겨진 상처, 앞으로의 성장 루트는 전체 리포트에서 이어집니다.</p>
+          <div class="locked-preview">
+            <div>인간관계 패턴 상세</div>
+            <div>사랑에 빠지는 과정</div>
+            <div>무너지는 순간</div>
+            <div>나를 회복시키는 문장</div>
+          </div>
+          <button class="gold-button" type="button">전체 리포트 받기</button>
+        </section>
+
+        <p class="report-disclaimer" id="disclaimer"></p>
+      </article>
+    </main>
+
+    <script src="./result.js"></script>
+  </body>
+</html>
