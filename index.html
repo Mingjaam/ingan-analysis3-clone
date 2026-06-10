@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#09090a">
+    <title>Inner AI Lab - 인스타그램 심리 분석</title>
+    <meta name="description" content="인스타그램 계정만 입력하면 무의식 패턴을 분석하는 랜딩/분석 시작 플로우 클론입니다.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Inner AI Lab 홈">
+        <span class="brand-seal">IA</span>
+        <span>
+          <strong>inner.ai</strong>
+          <small>심리연구소</small>
+        </span>
+      </a>
+      <button class="language-button" type="button" aria-label="언어 선택">
+        <span class="flag-dot"></span>
+        KO
+        <span class="chevron"></span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero-section">
+        <div class="research-badge">
+          <span>AI</span>
+          <p>AI 심리 연구팀이 만든 무의식 리포트</p>
+        </div>
+
+        <h1>내면의 8가지 얼굴</h1>
+        <p class="subheading">8 FACES OF THE INNER SELF</p>
+
+        <div class="card-orbit" aria-label="8가지 무의식 카드">
+          <article class="face-card tilt-left">
+            <span class="card-art crown"></span>
+            <strong>갇힌 여왕</strong>
+            <small>The Queen Inside</small>
+          </article>
+          <article class="face-card tilt-right">
+            <span class="card-art cloud"></span>
+            <strong>웃는 광대</strong>
+            <small>The Smiling Mask</small>
+          </article>
+          <article class="face-card tilt-left">
+            <span class="card-art dancer"></span>
+            <strong>춤추는 꼭두각시</strong>
+            <small>The Puppet</small>
+          </article>
+          <article class="face-card tilt-right">
+            <span class="card-art box"></span>
+            <strong>상자 속 요정</strong>
+            <small>The Hidden Fairy</small>
+          </article>
+          <article class="face-card tilt-right">
+            <span class="card-art ghost"></span>
+            <strong>조용한 유령</strong>
+            <small>The Silent Ghost</small>
+          </article>
+          <article class="face-card tilt-left">
+            <span class="card-art tower"></span>
+            <strong>등대의 감시자</strong>
+            <small>The Watcher</small>
+          </article>
+          <article class="face-card tilt-right">
+            <span class="card-art door"></span>
+            <strong>잠긴 문지기</strong>
+            <small>The Locked Keeper</small>
+          </article>
+          <article class="face-card tilt-left">
+            <span class="card-art king"></span>
+            <strong>왕관 쓴 아이</strong>
+            <small>The Lonely King</small>
+          </article>
+        </div>
+
+        <div class="hero-copy">
+          <p>테스트 없이, 인스타그램 계정만 입력하세요.</p>
+          <p>AI가 계정의 표현 방식과 관계 신호를 바탕으로 무의식 유형을 분석합니다.</p>
+        </div>
+
+        <form class="start-form" id="startForm">
+          <div class="handle-field">
+            <span>@</span>
+            <input id="handleInput" type="text" placeholder="instagram_id" autocomplete="off" minlength="2" required>
+          </div>
+          <button class="gold-button" id="mainCta" type="submit">분석 시작하기</button>
+        </form>
+
+        <p class="counter">현재까지 <strong id="analysisCount">327,119</strong>명이 분석 완료</p>
+        <div class="security-note">
+          <span class="shield-mark"></span>
+          <p>입력 정보는 암호화 및 익명화되어 분석 후 안전하게 삭제됩니다.</p>
+        </div>
+
+        <a class="scroll-indicator" href="#intro">SCROLL</a>
+      </section>
+
+      <section class="intro-section" id="intro">
+        <span class="section-kicker">AI PSYCHOLOGY TEAM</span>
+        <h2>인스타그램이 말해주는<br>새로운 자기이해</h2>
+        <p>사진의 분위기, 캡션의 말투, 댓글의 결, 관계의 리듬을 함께 읽어 단순 성격검사보다 더 사적인 리포트를 만듭니다.</p>
+      </section>
+
+      <section class="stories-section">
+        <span class="section-kicker">REAL STORIES</span>
+        <h2>무의식을 마주한 사람들</h2>
+        <div class="story-list">
+          <article class="story-card">
+            <span>J</span>
+            <strong>@ji***ng</strong>
+            <small>27세 · 직장인</small>
+            <p>가볍게 시작했는데 관계 속 가면 파트에서 멈췄어요. 내가 왜 가까워질수록 도망가는지 처음으로 설명된 느낌이었습니다.</p>
+            <em>분석 유형: 웃는 가면의 관찰자</em>
+          </article>
+          <article class="story-card">
+            <span>M</span>
+            <strong>@mi***a</strong>
+            <small>24세 · 대학원생</small>
+            <p>상대가 알아주길 기다리면서 정작 말은 안 하는 패턴이 너무 정확했어요. 친구에게 일부 보여줬더니 바로 따라 했습니다.</p>
+            <em>분석 유형: 확인받고 싶은 유령</em>
+          </article>
+          <article class="story-card">
+            <span>S</span>
+            <strong>@su***ok</strong>
+            <small>31세 · 프리랜서</small>
+            <p>내가 선택해서 올린 것들을 분석하니 변명의 여지가 없더라고요. 불편한 만큼 맞는 말이 많았습니다.</p>
+            <em>분석 유형: 왕관 뒤의 고독</em>
+          </article>
+        </div>
+        <div class="proof-line">평균 만족도 4.8/5.0 · 재분석 비율 34%</div>
+      </section>
+
+      <section class="discover-section">
+        <span class="section-kicker">WHAT YOU'LL DISCOVER</span>
+        <h2>무의식 분석으로 알 수 있는 것</h2>
+        <p>55페이지 분량의 심층 리포트처럼 보이는 미리보기 구조를 제공합니다.</p>
+        <div class="phone-carousel">
+          <article class="phone-card active">
+            <div class="phone-frame">
+              <div class="phone-notch"></div>
+              <h3>무의식 지표</h3>
+              <div class="mini-chart">
+                <span style="height:72%"></span>
+                <span style="height:42%"></span>
+                <span style="height:88%"></span>
+                <span style="height:54%"></span>
+              </div>
+              <p>인정욕구, 회피성, 관계 민감도, 자기확신을 시각화합니다.</p>
+            </div>
+            <strong>무의식 지표 분석</strong>
+          </article>
+          <article class="phone-card">
+            <div class="phone-frame">
+              <div class="phone-notch"></div>
+              <h3>관계 패턴</h3>
+              <ul>
+                <li>다가가는 방식</li>
+                <li>멀어지는 순간</li>
+                <li>반복되는 오해</li>
+              </ul>
+            </div>
+            <strong>인간관계 패턴</strong>
+          </article>
+          <article class="phone-card">
+            <div class="phone-frame">
+              <div class="phone-notch"></div>
+              <h3>사랑의 방식</h3>
+              <p>좋아할수록 감추는 말, 확인받고 싶은 순간, 끌리는 사람의 공통점을 해석합니다.</p>
+            </div>
+            <strong>사랑하는 방법</strong>
+          </article>
+          <article class="phone-card">
+            <div class="phone-frame">
+              <div class="phone-notch"></div>
+              <h3>숨은 상처</h3>
+              <p>반응이 없을 때 흔들리는 이유와 오래 반복된 결핍 버튼을 찾습니다.</p>
+            </div>
+            <strong>숨겨진 상처</strong>
+          </article>
+        </div>
+        <button class="gold-button secondary-cta" type="button" data-scroll-start>내 리포트 받아보기</button>
+      </section>
+
+      <section class="how-section">
+        <span class="section-kicker">HOW IT WORKS</span>
+        <h2>어떻게 인스타그램으로<br>무의식을 분석하나요?</h2>
+        <div class="method-grid">
+          <article>
+            <span class="method-icon visual"></span>
+            <h3>시각 패턴</h3>
+            <p>색감, 구도, 표정, 반복되는 장면이 드러내는 감정 상태와 욕구를 읽습니다.</p>
+          </article>
+          <article>
+            <span class="method-icon language"></span>
+            <h3>언어 패턴</h3>
+            <p>캡션의 길이, 어조, 이모지 사용, 질문형 문장이 보여주는 사고방식을 분류합니다.</p>
+          </article>
+          <article>
+            <span class="method-icon rhythm"></span>
+            <h3>행동 패턴</h3>
+            <p>게시 빈도, 반응 타이밍, 상호작용 흐름으로 심리적 리듬을 추정합니다.</p>
+          </article>
+        </div>
+        <p class="method-note">심리언어학 + 컴퓨터 비전 + 관계 패턴 모델 기반 분석</p>
+      </section>
+
+      <section class="lab-section">
+        <span class="section-kicker">INNER AI INSTITUTE</span>
+        <h2>심리연구소</h2>
+        <div class="lab-grid">
+          <article>
+            <h3>연구 기반</h3>
+            <p>무의식, 그림자, 대인관계 패턴을 설명하기 위한 리포트 구조를 사용합니다.</p>
+          </article>
+          <article>
+            <h3>데이터 검증</h3>
+            <p>분석 결과는 누적된 반응 데이터와 사용자 피드백으로 계속 정교화됩니다.</p>
+          </article>
+          <article>
+            <h3>프라이버시</h3>
+            <p>민감한 개인정보를 오래 보관하지 않고 분석 목적에 필요한 최소 범위만 사용합니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="faq-section">
+        <h2>자주 묻는 질문</h2>
+        <div class="faq-list">
+          <button class="faq-item" type="button">
+            <span>정말 인스타그램만으로 분석이 되나요?</span>
+            <strong>+</strong>
+            <p>공개된 표현, 반복되는 콘텐츠, 상호작용 신호를 해석합니다. 의학적 진단이 아니라 자기이해용 리포트입니다.</p>
+          </button>
+          <button class="faq-item" type="button">
+            <span>비공개 계정도 분석 가능한가요?</span>
+            <strong>+</strong>
+            <p>실서비스에서는 권한 연결이 필요합니다. 이 클론은 UI 플로우를 보여주기 위한 데모입니다.</p>
+          </button>
+          <button class="faq-item" type="button">
+            <span>분석은 얼마나 걸리나요?</span>
+            <strong>+</strong>
+            <p>계정 데이터 양에 따라 달라지지만, 랜딩에서는 대기/수집/해석 상태를 순차적으로 보여줍니다.</p>
+          </button>
+          <button class="faq-item" type="button">
+            <span>개인정보는 안전한가요?</span>
+            <strong>+</strong>
+            <p>실제 서비스에서는 토큰 암호화, 최소 수집, 분석 후 삭제 정책이 필요합니다.</p>
+          </button>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <h2>지금, 당신의 무의식을 마주하세요</h2>
+        <p>외면해온 패턴 속에 지금의 관계와 선택을 설명하는 단서가 있습니다.</p>
+        <form class="start-form bottom-form" id="bottomForm">
+          <div class="handle-field">
+            <span>@</span>
+            <input id="bottomHandleInput" type="text" placeholder="instagram_id" autocomplete="off" minlength="2">
+          </div>
+          <button class="gold-button" type="submit">분석 시작하기</button>
+        </form>
+        <small>무의식 미리보기 · 무료</small>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="brand footer-brand">
+        <span class="brand-seal">IA</span>
+        <span>
+          <strong>inner.ai</strong>
+          <small>심리연구소</small>
+        </span>
+      </div>
+      <nav>
+        <a href="#top">이용약관</a>
+        <a href="#top">개인정보처리방침</a>
+        <a href="#top">환불규정</a>
+      </nav>
+      <p>© 2026 inner lab prototype. Demo only.</p>
+    </footer>
+
+    <div class="modal-layer" id="accountModal" aria-hidden="true">
+      <div class="modal-backdrop" data-close-modal></div>
+      <section class="choice-modal" role="dialog" aria-modal="true" aria-labelledby="accountTitle">
+        <button class="modal-close" type="button" data-close-modal aria-label="닫기"></button>
+        <h2 id="accountTitle">맞춤형 분석을 위해 알려주세요</h2>
+        <p>분석 결과를 더 정확하고 유용하게 제공하기 위해 확인이 필요합니다.</p>
+        <button class="choice-card" type="button" data-account="mine">
+          <strong>내 계정이에요</strong>
+          <span>나 자신을 이해하는 데 도움이 되는 내용으로 분석됩니다.</span>
+        </button>
+        <button class="choice-card" type="button" data-account="other">
+          <strong>다른 사람 계정이에요</strong>
+          <span>제3자의 시선에서 도움이 되는 내용으로 분석됩니다.</span>
+        </button>
+      </section>
+    </div>
+
+    <div class="modal-layer" id="specialModal" aria-hidden="true">
+      <div class="modal-backdrop" data-close-modal></div>
+      <section class="special-modal" role="dialog" aria-modal="true" aria-labelledby="specialTitle">
+        <button class="modal-close" type="button" data-close-modal aria-label="닫기"></button>
+        <h2 id="specialTitle">스페셜 분석</h2>
+        <div class="report-preview">
+          <div class="preview-notch"></div>
+          <h3>나를 움직이는<br>숨은 질문</h3>
+          <p>추가 질문 하나를 선택하면 리포트의 마지막 챕터가 더 개인적으로 생성됩니다.</p>
+        </div>
+        <p class="special-copy">완성된 무의식 보고서와 함께 원하는 질문 하나를 추가 분석해 드립니다.</p>
+        <div class="question-list">
+          <button type="button" class="question-option selected">나를 무장해제 시키는 칭찬 세가지는?</button>
+          <button type="button" class="question-option">내가 가장 질투하는 사람은 누구이며, 그 이유</button>
+          <button type="button" class="question-option">내 안에 숨어있는 괴물이 있다면 어떤 모습일까</button>
+          <button type="button" class="question-option">직접 작성하기</button>
+        </div>
+        <p class="warning-copy">당신의 가장 어두운 질문을 던져보세요. 스스로도 무서워서 묻지 못했던 질문일수록 더 선명한 리포트가 됩니다.</p>
+        <textarea class="custom-question" id="customQuestion" placeholder="직접 작성하기"></textarea>
+        <button class="gold-button full" type="button" id="specialStart">분석시작하기</button>
+      </section>
+    </div>
+
+    <div class="modal-layer" id="profileModal" aria-hidden="true">
+      <div class="modal-backdrop" data-close-modal></div>
+      <section class="profile-modal" role="dialog" aria-modal="true" aria-labelledby="profileTitle">
+        <button class="modal-close" type="button" data-close-modal aria-label="닫기"></button>
+        <h2 id="profileTitle">하나만 더!</h2>
+        <p>성별과 나이를 입력하면<br><strong>더 정확한 분석</strong>이 가능해요</p>
+        <fieldset>
+          <legend>성별</legend>
+          <div class="segmented">
+            <button type="button" data-gender="male">남성</button>
+            <button type="button" data-gender="female">여성</button>
+          </div>
+        </fieldset>
+        <label class="select-label" for="birthYear">출생년도</label>
+        <select id="birthYear">
+          <option value="">선택하기</option>
+          <option>2004</option>
+          <option>2003</option>
+          <option>2002</option>
+          <option>2001</option>
+          <option>2000</option>
+          <option>1999</option>
+          <option>1998</option>
+          <option>1997</option>
+          <option>1996</option>
+          <option>1995</option>
+          <option>1994</option>
+          <option>1993</option>
+          <option>1992</option>
+          <option>1991</option>
+          <option>1990</option>
+        </select>
+        <button class="gold-button full" type="button" id="profileStart">분석 시작하기</button>
+        <button class="skip-button" type="button" id="skipProfile">건너뛰기</button>
+      </section>
+    </div>
+
+    <div class="analysis-overlay" id="analysisOverlay" aria-hidden="true">
+      <div class="analysis-box">
+        <span class="scanner"></span>
+        <h2 id="analysisOverlayTitle">@instagram 분석을 시작했습니다</h2>
+        <p id="analysisStatus">계정 공개 신호를 확인하는 중입니다.</p>
+        <div class="analysis-progress">
+          <span id="progressFill"></span>
+        </div>
+        <ul class="analysis-steps">
+          <li class="active">계정 접근 확인</li>
+          <li>게시물 패턴 수집</li>
+          <li>언어/관계 신호 해석</li>
+          <li>무의식 리포트 생성</li>
+        </ul>
+        <button class="outline-button" type="button" id="closeAnalysis">랜딩 계속 보기</button>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
